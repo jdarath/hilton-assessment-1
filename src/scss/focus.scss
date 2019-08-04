@@ -1,0 +1,46 @@
+@import 'vars', 'breakpoints';
+
+#servicios {
+    background-color: white;
+    .focus-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80% !important;
+        @include media-breakpoint-down(sm) {
+            justify-content: center;
+        }
+        @include media-breakpoint-only(md) {
+            width: 90%;
+        }
+        @include media-breakpoint-up(md) {
+            justify-content: space-between;
+        }
+        h2 {
+            margin-bottom: 60px;
+        }
+        .focus-item {
+            display: inline-flex;
+            flex-wrap: wrap;
+            @include media-breakpoint-down(sm) {
+                width: 60%;
+            }
+            @include media-breakpoint-up(md) {
+                width: calc((100% - 160px)/5);
+            }
+            img {
+                height: auto;
+                width: 100%;
+            }
+            .focus-label {
+                font-weight: bold;
+                text-align: center;
+                width: 100%;
+            }
+        }
+        .ctas {
+            margin-top: 60px;
+            text-align: center;
+            width: 100%;
+        }
+    }
+}

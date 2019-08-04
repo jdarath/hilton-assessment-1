@@ -1,0 +1,41 @@
+//* General functions and mixins *//
+
+//colors
+$bruki-red: #FC0639;
+$bruki-redish: rgba(252, 6, 57, .75);
+$bruki-black: #3B3B3B;
+$bruki-blackish: rgba(59, 59, 59, .75);
+$bruki-blackish2: rgba(59, 59, 59, .9);
+$bruki-gray: #e5e5e5;
+
+//fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+$bruki-font: 'Montserrat', sans-serif;
+
+//Breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+//mixins
+@mixin absolute-center {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin cta {
+  background-color: $bruki-red;
+  border: none;
+  border-radius: 21px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 0 auto 1.5rem;
+  padding: .75rem 4.5rem;
+  text-decoration: none;
+}

@@ -1,0 +1,35 @@
+@import 'vars', 'breakpoints';
+
+#stats {
+    background-color: $bruki-red;
+    color: white;
+    .stats-wrapper {
+        display: flex;
+        justify-content: space-between;
+        @include media-breakpoint-down(sm) {
+            flex-wrap: wrap;
+        }
+        .stats-item {
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+                &:not(:last-child) {
+                    margin-bottom: 40px;
+                }
+            }
+            @include media-breakpoint-up(md) {
+                width: 30%;
+            }
+            h3 {
+                font-size: 3rem;
+                margin: 0 auto .25rem;
+                text-align: center;
+            }
+            h4 {
+                font-size: 1.5rem;
+                font-weight: normal;
+                margin: 0 auto;
+                text-align: center;
+            }
+        }
+    }
+}

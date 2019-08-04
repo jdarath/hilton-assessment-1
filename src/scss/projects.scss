@@ -1,0 +1,67 @@
+@import 'vars', 'breakpoints';
+
+#portafolio {
+    background-color: $bruki-gray;
+    color: $bruki-black;
+    .projects-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 80% !important;
+        @include media-breakpoint-down(sm) {
+            justify-content: center;
+        }
+        .projects-item {
+            background-color: white;
+            border-radius: 3px;
+            box-shadow: 2px 3px 4px rgba(59, 59, 59, .35);
+            @include media-breakpoint-down(sm) {
+                width: 80%;
+                &:not(:last-child) {
+                    margin-bottom: 40px;
+                }
+            }
+            @include media-breakpoint-up(md) {
+                width: 30%;
+            }
+            .project-img-wrapper {
+                margin: 0;
+                width: 100%;
+                img {
+                    border-top-left-radius: 3px;
+                    border-top-right-radius: 3px;
+                    height: auto;
+                    width: 100%;
+                }
+            }
+            .project-info {
+                margin: 0;
+                @include media-breakpoint-down(sm) {
+                    padding: 20px 10px;
+                }
+                @include media-breakpoint-down(md) {
+                    padding: 10px;
+                    width: calc(100% - 20px);
+                }
+                @include media-breakpoint-up(lg) {
+                    padding: 20px;
+                    width: calc(100% - 40px);
+                }
+                h3 {
+                    margin: 0 auto .5rem;
+                }
+                p {
+                    font-size: .875rem;
+                    margin: 0;
+                    &:not(:last-child) {
+                        margin-bottom: .825rem;
+                    }
+                    &.project-info_subtitle {
+                        font-weight: bold;
+                        margin: 0 0 .25rem;
+                    }
+                }
+            }
+        }
+    }
+}

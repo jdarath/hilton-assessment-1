@@ -1,0 +1,94 @@
+@import 'vars', 'breakpoints';
+
+header {
+    font-family: $bruki-font;
+    left: 0;
+    margin: 0 auto;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    @include media-breakpoint-up(md) {
+        background-color: $bruki-redish;
+        padding: 20px;
+    }
+    .logo-ws {
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
+    .logo-mb, #menu-mb {
+        width: auto;
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
+    }
+    .logo-mb {
+        height: 40px;
+        padding: 10px;
+    }
+    #menu-mb {
+        height: 60px;
+    }
+    .menu-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        @include media-breakpoint-down(sm) {
+            background-color: white;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        @include media-breakpoint-up(md) {
+            width: 80%;
+        }
+    }
+    nav {
+        color: white;
+        font-size: .875rem;
+        .navItem {
+            color: white;
+            text-decoration: none;
+        }
+        @include media-breakpoint-down(sm) {
+            background-color: $bruki-blackish;
+            display: none;
+            position: absolute;
+            top: 60px;
+            width: 100%;
+            &.visible {
+                display: block;
+            }
+            .navItem {
+                display: block;
+                font-weight: bold;
+                padding: 10px 10%;
+                width: 100%;
+                &:hover {
+                    background-color: $bruki-blackish2;
+                }
+            }
+            .mn-sep {
+                display: none;
+            }
+        }
+        @include media-breakpoint-up(md) {
+            align-items: center;
+            display: flex;
+            justify-content: flex-end;
+            margin: 15px 0;
+            .navItem {
+                padding: 5px;
+                &:hover {
+                    background-color: black;
+                    border-radius: 3px;
+                    cursor: pointer;
+                }
+            }
+            .mn-sep {
+                display: inline;
+                margin: 0 5px;
+            }
+        }
+    }
+}
