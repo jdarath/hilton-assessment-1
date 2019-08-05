@@ -1,16 +1,38 @@
 //* General functions and mixins *//
 
 //colors
-$bruki-red: #FC0639;
-$bruki-redish: rgba(252, 6, 57, .75);
-$bruki-black: #3B3B3B;
-$bruki-blackish: rgba(59, 59, 59, .75);
-$bruki-blackish2: rgba(59, 59, 59, .9);
-$bruki-gray: #e5e5e5;
+$hgray: #1c1c1c;
+$hgray2: #2f2f2f;
+$hgray3: #474747;
+$hgray4: #242424;
+$hblue: #a1bed9;
+$hblue2: #001325;
+$hwhite: #cbcbcb;
+$hwhite2: #eeeeee;
 
 //fonts
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-$bruki-font: 'Montserrat', sans-serif;
+@font-face {
+  font-family: NimbusSans;
+  font-weight: bold;
+  src: url('../assets/NimbusSanL-Bol.otf');
+}
+@font-face {
+  font-family: NimbusSans;
+  font-style: italic;
+  font-weight: bold;
+  src: url('../assets/NimbusSanL-BolIta.otf');
+}
+@font-face {
+  font-family: NimbusSans;
+  font-style: normal;
+  src: url('../assets/NimbusSanL-Reg.otf');
+}
+@font-face {
+  font-family: NimbusSans;
+  font-style: italic;
+  src: url('../assets/NimbusSanL-RegIta.otf');
+}
+$hfont: 'NimbusSans', sans-serif;
 
 //Breakpoints
 $grid-breakpoints: (
@@ -20,22 +42,3 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1200px
 ) !default;
-
-//mixins
-@mixin absolute-center {
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-@mixin cta {
-  background-color: $bruki-red;
-  border: none;
-  border-radius: 21px;
-  color: white;
-  cursor: pointer;
-  font-weight: bold;
-  margin: 0 auto 1.5rem;
-  padding: .75rem 4.5rem;
-  text-decoration: none;
-}

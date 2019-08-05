@@ -1,20 +1,10 @@
 'use strict';
-const webpack = require('webpack'),
-      path = require('path');
+const path = require('path');
 module.exports = {
-    entry: {
-        main: [
-            './src/jsx/init.js'
-        ]
-    },
-    /*externals: {
-        appVars: 'appVars',
-        reactLoaders: 'reactLoaders'
-    },*/
+    entry: path.join(__dirname, '/src/jsx/init.js'),
     output: {
-        path: path.resolve(__dirname, 'dist/'),
-        //publicPath: '/js',
-        filename: 'bundle.[name].js'
+        filename: 'bundle.[name].js',
+        path: path.join(__dirname, '/dist/')
     },
     module: {
         rules: [
@@ -28,7 +18,17 @@ module.exports = {
                 use: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
-                test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
+                test: /\.(jp(e*)g|png|gif|svg)$/,
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        limit: 8000,
+                        name: 'assets/[hash]-[name].[ext]'
+                    }
+                }]
+            },
+            {
+                test: /\.(otf|woff|woff2|eot|ttf|)(\?[a-z0-9=.]+)?$/,
                 loader: 'url-loader?limit=100000'
             }
         ]
@@ -38,6 +38,9 @@ module.exports = {
     },
     watch: true,
     watchOptions: {
-        ignored: ['assets', 'node_modules']
+        ignored: ['node_modules']
+    },
+    devServer: {
+        contentBase: './dist'
     }
 }

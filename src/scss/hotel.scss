@@ -1,0 +1,80 @@
+@import 'vars', 'breakpoints';
+
+.hotel {
+    background-image: url('../assets/background.png');
+    background-size: 100% auto;
+    background-position: center 75%;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 89px);
+    padding: 20px;
+    width: calc(100% - 40px);
+    .hotel_cover {
+        box-shadow: 2px 2px 6px $hgray;
+        display: flex;
+        width: 100%;
+        img {
+            border: 2.5px solid white;
+            height: auto;
+            width: calc(100% - 8px);
+        }
+    }
+    .hotel_title {
+        color: white;
+        font-size: 1rem;
+        margin: 1rem auto 2px;
+    }
+    .hotel_address {
+        color: $hblue;
+        font-size: .8125rem;
+        line-height: 1.5;
+        margin: 0 auto;
+    }
+    .hotel_contact {
+        border-bottom: 1px solid $hblue;
+        color: white;
+        display: inline-block;
+        font-size: .8125rem;
+        line-height: 1.25;
+        text-decoration: none;
+    }
+    .hotel_links {
+        margin: 20px auto 0;
+        .hotel_link {
+            background-image: linear-gradient(#e8ebee, #c0cedb);
+            border-top: 1px solid $hwhite;
+            border-bottom: 1px solid $hwhite2;
+            color: $hblue2;
+            display: block;
+            font-size: .87  5rem;
+            font-weight: bold;
+            line-height: 1;
+            padding: 1rem 1.5rem .6875rem;
+            position: relative;
+            text-decoration: none;
+            &:first-child {
+                border-top: 0px none;
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+            }
+            &:last-child {
+                border-bottom: 0px none;
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+            }
+            &::after {
+                border-top: 2px solid $hgray3;
+                border-right: 2px solid $hgray3;
+                box-shadow: 1px -1px 1px rgba(255, 255, 255, .5);
+                content: '';
+                display: inline-block;
+                height: 6px;
+                position: absolute;
+                right: 13px;
+                top: 50%;
+                transform: translateY(-50%);
+                transform: rotate(45deg);
+                width: 6px;
+            }
+        }
+    }
+}

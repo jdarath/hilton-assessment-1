@@ -1,105 +1,17 @@
 @import 'vars', 'breakpoints';
 
 html, body {
-    font-family: $bruki-font;
+    font-family: $hfont;
     font-size: 16px;
     margin: 0;
     padding: 0;
     width: 100%;
 }
-#BrukiApp {
-    color: $bruki-black;
-
+#HiltonA1-app {
     .hidden {
         display: none;
     }
     .visible {
         display: block;
-    }
-
-    section {
-        display: block;
-        position: relative;
-        width: 100vw;
-        .section-wrapper {
-            margin: 0px auto;
-            @include media-breakpoint-down(md) {
-                padding: 60px 0;
-                width: 90%;
-            }
-            @include media-breakpoint-up(lg) {
-                padding: 80px 0;
-                width: 60%;
-            }
-        }
-        h2 {
-            color: $bruki-black;
-            font-size: 1.5rem;
-            margin-bottom: 2em;
-            text-align: center;
-            width: 100%;
-            &::after {
-                content: '';
-                display: block;
-                border-bottom: 4px solid $bruki-red;
-                margin: 5px auto 0;
-                width: 60px;
-            }
-        }
-    }
-    .cta, .btn, button {
-        @include cta;
-    }
-
-    .lb_bg {
-        background-color: rgba(0,0,0,.65);
-        display: none;
-        left: 0;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        width: 100vw;
-        z-index: 110;
-        &.visible {
-            display: block;
-        }
-        .lb_wrapper {
-            background-color: white;
-            border: none;
-            border-radius: 4px;
-            left: 50%;
-            max-height: calc(90vh - 80px);
-            overflow: auto;
-            position: absolute;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            @include media-breakpoint-down(sm) {
-                max-width: calc(90% - 80px);
-                padding: 40px;
-            }
-            @include media-breakpoint-only(md) {
-                max-width: calc(85% - 160px);
-                padding: 80px;
-            }
-            @include media-breakpoint-up(lg) {
-                max-width: calc(75% - 160px);
-                padding: 80px;
-            }
-            .lb_close {
-                cursor: pointer;
-                display: inline;
-                height: auto;
-                left: 10px;
-                position: absolute;
-                top: 10px;
-                width: 20px;
-            }
-            .ctas {
-                display: flex;
-                flex-wrap: nowrap;
-                justify-content: space-evenly;
-                text-align: center;
-            }
-        }
     }
 }
