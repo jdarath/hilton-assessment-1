@@ -11,6 +11,7 @@
     .hotel_cover {
         box-shadow: 2px 2px 6px $hgray;
         display: flex;
+        margin: 0;
         width: 100%;
         img {
             border: 2.5px solid white;
@@ -25,6 +26,7 @@
     }
     .hotel_address {
         color: $hblue;
+        font-style: normal;
         font-size: .8125rem;
         line-height: 1.5;
         margin: 0 auto;

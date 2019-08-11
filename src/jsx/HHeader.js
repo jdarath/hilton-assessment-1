@@ -6,9 +6,9 @@ class HHeader extends Component {
     render() {
         return (
             <header>
-                <button class="header_button-back" role="button">Back</button>
-                <h1 class="header_title">Hotel Details</h1>
-                <img class="header_img-logo" src={HI_isotipo} alt="Hilton logo" />
+                <button className="header_button-back" role="button">Back</button>
+                <h1 className="header_title">Hotel Details</h1>
+                <img className="header_img-logo" src={HI_isotipo} alt="Hilton logo" />
             </header>
         );
     }

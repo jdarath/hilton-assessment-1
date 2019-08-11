@@ -22,21 +22,25 @@ class HHotel extends Component {
     render() {
         const { hotel, links } = this.state;
         return (
-            <main class="hotel" itemscope itemtype="http://schema.org/Hotel">
-                <div class="hotel_cover">
-                    <img src={hotel.cover} alt={hotel.title} itemprop="photo" />
-                </div>
-                <h2 class="hotel_title" itemprop="name">{hotel.title}</h2>
-                <div class="hotel_address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                    <span itemprop="streetAddress">{hotel.address}</span><br />
-                    <span itemprop="addressLocality">{hotel.city}</span>,&nbsp;
-                    <span itemprop="addressRegion">{hotel.state}</span>,&nbsp;
-                    <span itemprop="postalCode">{hotel.zip}</span>
-                </div>
-                <a class="hotel_contact" href={`tel:` + hotel.phone} target="_blank" itemprop="telephone">{hotel.phone}</a>
-                <nav class="hotel_links">
-                    {links.map((link, k) => <HotelLink key={k} label={link} />)}
-                </nav>
+            <main className="hotel" itemScope itemType="http://schema.org/Hotel">
+                <article>
+                    <section>
+                        <figure className="hotel_cover">
+                            <img src={hotel.cover} alt={hotel.title} itemProp="photo" />
+                        </figure>
+                        <h2 className="hotel_title" itemProp="name">{hotel.title}</h2>
+                        <address className="hotel_address" itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
+                            <span itemProp="streetAddress">{hotel.address}</span><br />
+                            <span itemProp="addressLocality">{hotel.city}</span>,&nbsp;
+                            <span itemProp="addressRegion">{hotel.state}</span>,&nbsp;
+                            <span itemProp="postalCode">{hotel.zip}</span>
+                        </address>
+                        <a className="hotel_contact" href={`tel:` + hotel.phone} target="_blank" itemProp="telephone">{hotel.phone}</a>
+                    </section>
+                    <nav className="hotel_links">
+                        {links.map((link, k) => <HotelLink key={k} label={link} />)}
+                    </nav>
+                </article>
             </main>
         );
     }
@@ -47,7 +51,7 @@ export default HHotel;
 function HotelLink(props) {
     const {label} = props;
     return (
-        <a class="hotel_link">
+        <a className="hotel_link">
             {label}
         </a>
     );
