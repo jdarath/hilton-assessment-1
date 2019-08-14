@@ -6,7 +6,7 @@ header {
     color: white;
     display: flex;
     justify-content: center;
-    line-height: 28px;
+    line-height: 1.75rem;
     padding: 10px 0;
     position: relative;
     .header_button-back {
@@ -17,9 +17,9 @@ header {
         cursor: pointer;
         font-size: .75rem;
         font-weight: bold;
-        left: 10px;
-        line-height: 28px;
-        padding: 0 8px;
+        left: .625rem;
+        line-height: 1.75rem;
+        padding: 0 0.5rem;
         position: absolute;
         top: 9px;
         &::before {
@@ -38,10 +38,10 @@ header {
         margin: 0 auto;
     }
     .header_img-logo {
-        height: 18px;
+        height: 1.125rem;
         position: absolute;
-        right: 12px;
-        top: 13px;
+        right: 0.75rem;
+        top: 0.8125rem;
         width: auto;
     }
 }
